@@ -22,7 +22,7 @@ You've got a dataset of around 460 users. Figure out what's actually going on, t
 
 ## The dataset
 
-`data/songscription_users.xlsx`
+`data/songscription_users.csv`
 
 | Field | Description |
 | --- | --- |
