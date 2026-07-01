@@ -40,16 +40,16 @@ You've got a dataset of around 460 users. Figure out what's actually going on, t
 
 ## Part 1: Diagnose (1 to 1.5 hours)
 
-Dig into the dataset and find the single most important insight. The one thing that, if you acted on it, would move conversion or retention the most.
+Dig into the dataset and find two or three key insights. Then, prioritize the insights to identify the most important one (the one thing that, if you acted on it, would move conversion or retention the most).
 
 Deliver:
 
 - The code or queries you used (Python or SQL whatever you prefer, just make it runnable)
 - The prompts you used to interact with AI models (if relevant)
-- The output
+- The output including any data visualizations 
 - 2–3 sentences: what you found, why it matters, what you'd do with it and your next steps based on the analysis
 
-One rule: don't summarize the dataset. We want one sharp finding, not a tour of the data.
+One rule: don't summarize the dataset. We want key insights, not a tour of the data.
 
 One more thing. Flag anything that doesn't fit your model. Outliers, anomalies, things that should be true but aren't. If you can't explain something, say so. We'd take honest uncertainty over a confident wrong answer.
 
@@ -77,22 +77,26 @@ Levers can live anywhere in the funnel. Here are some examples of levers you can
 Pick the one you'd ship first and build it for real, enough that we can click through it and understand it. Show the thinking, not just the final output:
 
 - If it's a nudge, or a set of them: how each one looks, when it fires, and how the wording or the surrounding context shifts based on what the user's been doing.
-- If it's an email: the email itself, and who gets it when.
+- If it's an email: the email itself, and who gets it when, and the code to send them at scale.
 - If it's an A/B test, or two: what each variant is, what you're measuring, and what result would make you ship it.
 
 Make sure it's clear where this would go in the product, either by describing it or by showing us in screenshots of our existing product. If your change needs new features to support it, explain those too.
 
 If your intervention is one piece of a bigger change to the user journey, walk us through that fuller journey and what impact you'd expect it to have.
 
+Then, wire up a backend to track how your change performs. Fire an event on the key user action, capture something like click-through rate, and store it in a small endpoint, PostHog's free tier, or a Supabase table.
+
 Wrap up with a few sentences: what you'd measure to know it worked, roughly how much lift you'd expect, and how you'd run the test.
 
-**Bonus, optional:** wire up a backend to track how your change performs. Fire an event on the key user action, capture something like click-through rate, and store it in a small endpoint, PostHog's free tier, or a Supabase table.
+**Note:** We are looking for a fully wired frontend and backend here. The build itself doesn't have to be large, but it must showcase both coding and UX/UI skills grounded in user insights. 
 
 ### What we care about
 
 The choice and the ranking matter as much as the build. Why this one over the rest, and why in that order? That tells us how you think about where to spend effort.
 
 The copy has to be clear and land with the people you're aiming at. We want something polished, not a rough sketch.
+
+The output has to include a fully developed front end and backend (not just a front end wireframe)
 
 It's a real product surface, so make it look right. Match the look and feel of our site. Think about the empty state, the hover, what happens while something loads or when it breaks. A CTA should make someone want to click, not scare them off.
 
